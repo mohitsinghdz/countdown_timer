@@ -1,0 +1,174 @@
+
+body {
+  background: #fff;
+}
+
+.to{
+  font-size: 100px;
+  font-family:fantasy;
+
+  padding-top: 100px;
+}
+.digits,
+.digits .digit {
+  display: inline-block;
+}
+
+.digits .top-half-wrapper,
+.digits .bottom-half-wrapper {
+  position: relative;
+}
+
+.digits .top-half,
+.digits .bottom-half {
+  position: absolute;;
+
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.digits .top-half {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+
+  -webkit-transform: perspective(300) rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+}
+
+.digits .bottom-half {
+  line-height: 0;
+
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+
+  -webkit-transform: perspective(300) rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+}
+
+.digits .no-animation {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  transition: none !important;
+}
+
+.digits .show {
+  z-index: 10;
+
+  -webkit-transform: perspective(300) rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+}
+
+.digits .roll-over {
+  -webkit-transform: perspective(300) rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+}
+
+
+
+
+.digits .top-half-wrapper,
+.digits .bottom-half-wrapper {
+  width: 65px;
+  height: 50px;
+}
+
+.digits .top-half,
+.digits .bottom-half {
+  width: 65px;
+  height: 50px;
+  text-align: center;
+
+
+  font-family: Proxima Nova Soft, Helvetica, Sans;
+  font-weight: 800;
+  font-size: 100px;
+}
+
+.digits .top-half {
+  color: #FFF;
+}
+
+.digits .bottom-half {
+  color: #EEE;
+}
+
+.digits .top-half {
+  background: #000;
+  border-radius: 10px 10px 0px 0px;
+  line-height: 100px;
+}
+
+.digits .bottom-half {
+  background: #000;
+  border-radius: 0px 0px 10px 10px ;
+}
+
+
+
+.digits.countdown .digit:not(:last-child) {
+  margin-right: 20px;
+}
+
+.digits.countdown .digit.second-2 {
+  margin-right: 0;
+}
+
+.digits.countdown .digit.second-1,
+.digits.countdown .digit.minute-1,
+.digits.countdown .digit.hour-1 {
+  margin-left: 30px;
+}
+
+
+
+.digits.statistics .digit:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+
+
+
+.digits .labels {
+  text-align: right;
+  color: #111;
+}
+
+.digits .label {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  font-family: Proxima Nova Soft, Helvetica, Sans;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 15px 0;
+  color: #000;
+}
+
+.digits .label.hours,
+.digits .label.minutes,
+.digits .label.seconds {
+  margin-left: 60px;
+}
+
+.digits .label.days:after {
+  content: "Days";
+}
+
+.digits .label.hours:after {
+  content: "Hours";
+}
+
+.digits .label.minutes:after {
+  content: "Minutes";
+}
+
+.digits .label.seconds:after {
+  content: "Seconds";
+}
+
+.digit {
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
